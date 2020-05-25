@@ -1,0 +1,19 @@
+{
+  "name": "com.huawei.cordovastoreplugin",
+  "version": "1.0.0",
+  "description": "",
+  "cordova": {
+    "id": "com.huawei.cordovastoreplugin",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "",
+  "license": "ISC"
+}

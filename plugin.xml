@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.huawei.cordovastoreplugin" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>CordovaStorePlugin</name>
+	<js-module name="Store" src="www/Store.js">
+		<clobbers target="cordova.plugins.Store" />
+	</js-module>
+	<js-module name="ServiceAvailability" src="www/ServiceAvailability.js">
+		<clobbers target="cordova.plugins.ServiceAvailability" />
+	</js-module>
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="Store">
+				<param name="android-package" value="com.huawei.cordovastoreplugin.Store" />
+			</feature>
+			<feature name="ServiceAvailability">
+				<param name="android-package" value="com.huawei.cordovastoreplugin.ServiceAvailability" />
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml" />
+		<source-file src="src/android/Store.java" target-dir="src/com/huawei/cordovastoreplugin" />
+		<source-file src="src/android/ServiceAvailability.java" target-dir="src/com/huawei/cordovastoreplugin" />
+		<source-file src="src/android/MobileServices.java" target-dir="src/com/huawei/cordovastoreplugin" />
+	</platform>
+	<platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="Store">
+				<param name="ios-package" value="CordovaStorePlugin" />
+			</feature>
+		</config-file>
+		<header-file src="src/ios/Store.h" />
+		<source-file src="src/ios/Store.m" />
+	</platform>
+</plugin>
